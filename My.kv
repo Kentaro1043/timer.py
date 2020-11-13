@@ -1,0 +1,14 @@
+#:kivy 2.0.0
+BoxLayout:
+
+    Label:
+        text: "Hallo World"
+        color: 0, 1, 0, 1
+        size_hint_x: 1
+
+        canvas.before:
+            Color:
+                rgba: 0, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
