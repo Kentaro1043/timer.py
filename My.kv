@@ -8,20 +8,56 @@ TextWidget:
         size: root.size
     
         Label:
+            size_hint_y: 0.4
             id: label1
             font_size: 68
             text: root.text
 
         BoxLayout:
+            size_hint_y: 0.1
             TextInput:
-                id: text_box
-                size_hint_x: 70
-                font_size: 68
-                focus:True
+                id: hour_box
+                size_hint_x: 45
+                font_size: 60
+                focus: True
                 on_text_validate: root.buttonClicked()
+            Label:
+                size_hint_x:100
+                font_size:50
+                text: "hour"
+            TextInput:
+                id: minute_box
+                size_hint_x: 45
+                font_size: 60
+                focus: True
+                on_text_validate: root.buttonClicked()
+            Label:
+                size_hint_x: 100
+                font_size: 50
+                text: "minute"
+            TextInput:
+                id: second_box
+                size_hint_x: 45
+                font_size: 60
+                focus: True
+                on_text_validate: root.buttonClicked()
+            Label:
+                size_hint_x: 100
+                font_size: 50
+                text: "second"
+        BoxLayout:
+            size_hint_y: 0.2
             Button:
-                id: button1
-                size_hint_x: 30
-                text:"start"
+                id:button1
+                size_hint_x: 0.5
+                text: "stop"
                 font_size: 68
                 on_press: root.buttonClicked()
+            Button:
+                id:button2
+                size_hint_x: 0.5
+                text: "start"
+                font_size: 68
+                on_press: root.buttonClicked()
+
+            
