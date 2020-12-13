@@ -1,2 +1,3 @@
 # timer.py
- This is simple timer on Python
+ PythonとKivyで構築されたシンプルなタイマーです。  
+ ライセンスは放棄したのでご自由にお使いください。
