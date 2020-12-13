@@ -48,16 +48,23 @@ TextWidget:
         BoxLayout:
             size_hint_y: 0.2
             Button:
-                id:button1
-                size_hint_x: 0.5
+                id:stopButton
+                size_hint_x: 0.3
                 text: "stop"
                 font_size: 68
-                on_press: root.buttonClicked()
+                on_press: root.stopButton()
+                disabled: True
             Button:
-                id:button2
-                size_hint_x: 0.5
+                id:restartButton
+                size_hint_x: 0.3
+                text: "restart"
+                font_size: 68
+                on_press :root.restartButton()
+                disabled: True
+            Button:
+                id:startButton
+                size_hint_x: 0.3
                 text: "start"
                 font_size: 68
-                on_press: root.buttonClicked()
-
-            
+                on_press: root.startButton()
+                disabled: False
