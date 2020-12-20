@@ -8,10 +8,18 @@ TextWidget:
         size: root.size
     
         Label:
-            size_hint_y: 0.4
+            size_hint_y: 0.35
             id: label1
-            font_size: 68
+            font_size: 80
             text: root.text
+
+        Button:
+            id: okButton
+            size_hint_y: 0.15
+            text: "OK"
+            font_size: 60
+            on_press: root.okButton()
+            disabled: True
 
         BoxLayout:
             size_hint_y: 0.1
@@ -51,27 +59,27 @@ TextWidget:
                 id:stopButton
                 size_hint_x: 0.25
                 text: "stop"
-                font_size:68
+                font_size: 65
                 on_press: root.stopButton()
                 disabled: True
             Button:
                 id:pauseButton
                 size_hint_x: 0.25
                 text: "pause"
-                font_size: 68
+                font_size: 65
                 on_press: root.pauseButton()
                 disabled: True
             Button:
                 id:restartButton
                 size_hint_x: 0.25
                 text: "restart"
-                font_size: 68
+                font_size: 65
                 on_press :root.restartButton()
                 disabled: True
             Button:
                 id:startButton
                 size_hint_x: 0.25
                 text: "start"
-                font_size: 68
+                font_size: 65
                 on_press: root.startButton()
                 disabled: False
