@@ -21,12 +21,6 @@ class TextWidget(Widget):
         super(TextWidget, self).__init__(**kwargs)
         self.text = ""
 
-    def _on_stop(self):
-        self.sound.play()
-
-    def passFunction(self):
-        pass
-
     def intervalCountdown(self,dt):
         self.allTime = self.allTime - 1
         self.hourText = "00" + str(math.floor(int(self.allTime) / 3600))
@@ -38,9 +32,6 @@ class TextWidget(Widget):
             self.ids["okButton"].disabled = False
             self.ids["stopButton"].disabled = True
             self.ids["pauseButton"].disabled = True
-            self.sound = SoundLoader.load('alerm.wav')
-            self.sound.play()
-            self.sound.on_stop = self._on_stop
             return False
 
     def startButton(self):
@@ -93,8 +84,6 @@ class TextWidget(Widget):
         self.ids["restartButton"].disabled = True
 
     def okButton(self):
-        self.sound.on_stop = self.passFunction
-        self.sound.stop()
         self.text = ""
         self.ids["okButton"].disabled = True
         self.ids["stopButton"].disabled = True
